@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch('https://cataas.com/api/cats?limit=1050');
         const allCats = await response.json();
 
-        // Shuffle and select `limit` cats
+        // Mezcla los gatos y selecciona un número limitado de ellos, con la intención de que se muestren gatos diferentes cada vez.
         const shuffled = allCats.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, limit);
       } catch (error) {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
 
-    // "Renderizado" / creación de las cartas usando estilizado Bootstrap y los datos previamente recogidos por la función anterior.
+    // "Renderizado" / creación de las cartas usando estilizado Bootstrap y los datos previamente recogidos por la función anterior, juntandolo todo para que sea inyectado en la página y que se muestre como es deseado.
     function renderCatCards(cats) {
       gallery.innerHTML = ''; // Clear existing cards if any
 

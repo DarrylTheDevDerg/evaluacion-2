@@ -1,3 +1,4 @@
+/* Estilo usado para las dos secciones de fotos de gato, tanto la estática, como la GIF, definiendo la orientación y posición de los objetos, . */
 #cat-row{
     display: inline-flex;
     text-align: center;
@@ -10,10 +11,12 @@
     padding: 30px 75px;
 }
 
+/* Estilo sin usar, ignorar. */
 #cat-row div{
     text-align: center;
 }
 
+/* Estilo usado para la sección del título, definiendo el color del fondo, del texto y el estilo del texto. */
 #title{
     background-color: teal;
     color: aliceblue;
@@ -24,10 +27,12 @@
     
 }
 
+/* Estilo usado para el fondo de la página. */
 #back{
     background-color: rgb(42, 201, 180);
 }
 
+/* Este es usado para poder organizar y alinear los objetos en el centro de la página. */
 #flex-content{
     display: flex;
     justify-content: center;
@@ -35,6 +40,7 @@
     padding: 50px;
 }
 
+/* Usado para el footer de la página, abarca todo el espacio disponible al final de la página. */
 #endpage{
     background-color: teal;
     text-align: center;
