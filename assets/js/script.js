@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       gallery.innerHTML = ''; // Clear existing cards if any
 
       cats.forEach(cat => {
-        const names = ["Cat.","Gato.","Catto.","Gatto."];
+        const names = ["Cat.","Gato.","Catto.","Gatto.", "Kitty", "Kitten", "Kimty", "salad."];
 
         const randomIndex = Math.floor(Math.random() * names.length);
 
