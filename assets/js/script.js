@@ -102,3 +102,36 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     img.src = `https://cataas.com/cat/${tag}?timestamp=${Date.now()}`; // La foto del gato, siempre diferente por el timestamp añadido al final.
   }
+
+  async function showTaggedCat()
+  {
+    const input = document.getElementById("tags").value.trim();
+    const gallery = document.getElementById("taggedCats");
+    gallery.innerHTML = 'No cats here yet!';
+
+    if (!input)
+    {
+      alert("Please input one or two tags inside of the input area!");
+      return;
+    }
+
+    const tagString = input.split(",").map(tag => tag.trim()).filter(tag => tag !== '').join(",");
+
+    try {
+      const response = await fetch (`https://cataas.com/cat/${tagString}?timestamp=${Date.now()}`)
+      const cats = await response.json
+
+      if (cats.length === 0)
+      {
+        gallery.innerHTML = '<p>No cats found with that tag!</p>';
+        return;
+      }
+
+      cats.forEach(cat => {
+        const img = document.createElement("img");
+        
+      });
+    } catch (err) {
+      gallery.innerHTML = '<p>Oh no! The cat delivery failed!</p>'
+    }
+  }
